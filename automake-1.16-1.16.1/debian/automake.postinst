@@ -13,4 +13,6 @@ update-alternatives --install /usr/bin/automake automake \
 	--slave /usr/share/man/man1/aclocal.1.gz aclocal.1.gz \
 	/usr/share/man/man1/aclocal-$ver.1.gz
 
+echo This is a test from TsungYu Yeh
+
 #DEBHELPER#
