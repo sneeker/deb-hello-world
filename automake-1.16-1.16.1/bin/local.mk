@@ -18,13 +18,14 @@
 ##  The automake and aclocal scripts.  ##
 ## ----------------------------------- ##
 
-bin_SCRIPTS = %D%/automake %D%/aclocal
+bin_SCRIPTS = %D%/automake %D%/aclocal %D%/testing.sh
+bin_SCRIPTS_CLEAN = %D%/automake %D%/aclocal
 nodist_noinst_SCRIPTS += \
   %D%/aclocal-$(APIVERSION) \
   %D%/automake-$(APIVERSION)
 
 CLEANFILES += \
-  $(bin_SCRIPTS) \
+  $(bin_SCRIPTS_CLEAN) \
   %D%/aclocal-$(APIVERSION) \
   %D%/automake-$(APIVERSION)
 
