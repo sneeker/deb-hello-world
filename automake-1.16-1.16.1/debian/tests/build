@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+trap "cp ./test-suite.log $AUTOPKGTEST_ARTIFACTS" EXIT
+
+case "$(dpkg --print-architecture)" in
+  armhf)
+    # fails on armhf, see LP: #1812688
+    patch -p1 < debian/patches/mark-self-check-report-xfail.diff
+esac
+
+make check
